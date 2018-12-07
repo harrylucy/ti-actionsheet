@@ -1,0 +1,48 @@
+@import '../base/fn.less';
+
+.ti-actionsheet{
+  .actionsheet-mark {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: @tiMaskColor;
+    z-index:2010;
+  }
+  .actionsheet-main {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(0);
+    overflow: hidden;
+    z-index:2010;
+    .actionsheet-title-item {
+      border-bottom: 1px solid @tiBottomLineColor;
+    }
+    .actionsheet-content {
+      background-color: @tiBgColorDefault;
+      .actionsheet-menu {
+        .actionsheet-menu-item {
+          border-top: 1px solid @tiBottomLineColor;
+        }
+        & .actionsheet-menu-item:first-child {
+          border-top: none;
+        }
+      }
+      .item {
+        background: #fff;
+        padding: 0.26rem 0;
+        text-align: center;
+        font-size: 0.32rem;
+        &:active {
+          background: @tiMenuActionColor;
+        }
+      }
+      .actionsheet-cencel {
+        margin-top: 0.1rem;
+      }
+    }
+  }
+}
